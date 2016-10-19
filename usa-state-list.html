@@ -99,10 +99,10 @@ state drop down list that will include states, outlying territories, armed force
       },
 
       attached: function() {
-        this.loadJSON(this.fileName);
+        this._loadJSON(this.fileName);
       },
 
-      loadJSON: function(url) {
+      _loadJSON: function(url) {
 
         fetch(url).then(response => {
           if (response.headers.get("content-type") &&
