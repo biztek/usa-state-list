@@ -15,7 +15,6 @@ state drop down list that will include states, outlying territories, armed force
     <style>
       :host {
         display: block;
-        width:100%;
       }
       #state {
         width: 100%;
@@ -100,6 +99,8 @@ state drop down list that will include states, outlying territories, armed force
 
       attached: function() {
         this._loadJSON(this.fileName);
+        this.set('invalid', false);
+        return this.invalid;
       },
 
       _loadJSON: function(url) {
