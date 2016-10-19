@@ -1,0 +1,126 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../paper-dropdown-menu/paper-dropdown-menu.html">
+<link rel="import" href="../paper-listbox/paper-listbox.html">
+<link rel="import" href="../paper-item/paper-item.html">
+
+<!--
+`usa-state-list`
+state drop down list that will include states, outlying territories, armed forces.
+
+@demo demo/index.html
+-->
+
+<dom-module id="usa-state-list">
+  <template>
+    <style>
+      :host {
+        display: block;
+        width:100%;
+      }
+      #state {
+        width: 100%;
+      }
+      paper-dropdown-menu-input {
+       @apply(--usa-state-list-input);
+     }
+    </style>
+
+    <paper-dropdown-menu id="state" label="[[label]]" required="[[required]]"
+      auto-validate="[[autoValidate]]" title$="[[title]]" placeholder="[[placeholder]]"
+      invalid="{{invalid}}" error-message="[[errorMessage]]">
+    <paper-listbox class="dropdown-content" selected="{{value}}" attr-for-selected="name">
+      <template is="dom-repeat" items="[[_states]]">
+        <paper-item name="[[item.abbreviation]]">[[item.name]]</paper-item>
+      </template>
+  </paper-listbox>
+  </paper-dropdown-menu>
+  </template>
+
+  <script>
+    Polymer({ // jshint ignore: line
+
+      is: 'usa-state-list',
+
+      properties: {
+        label: {
+          type: String,
+          value: 'Select State *'
+        },
+        title: {
+          type: String,
+          value: 'States'
+        },
+        invalid: {
+          type: Boolean,
+          value: false,
+          notify: true
+        },
+        value: {
+          type: String,
+          notify: true
+        },
+        _states: {
+          type: Array,
+        },
+        errorMessage: {
+          type: String,
+          value: 'State is required'
+        },
+        placeholder: {
+          type: String,
+          value: ''
+        },
+        autoValidate: {
+          type: Boolean,
+          value: false
+        },
+        required: {
+          type: Boolean,
+          value: false
+        },
+        fileName: {
+          type: String,
+          notify: true
+        },
+
+      },
+      observers: [
+        '_stateChanged(value)'
+      ],
+
+      validate: function() {
+        this.async(function() {
+          this.$.state.validate();
+        }, 10);
+      },
+
+      _stateChanged: function() {
+        this.validate();
+      },
+
+      attached: function() {
+        this._loadJSON(this.fileName);
+      },
+
+      _loadJSON: function(url) {
+
+        fetch(url).then(response => {
+          if (response.headers.get("content-type") &&
+            response.headers.get("content-type").toLowerCase().indexOf("application/json") >= 0) {
+            return response.json();
+          } else {
+            throw new TypeError();
+          }
+        }).then(data => {
+          let values = Object.keys(data).map((key) => {
+            return data[key];
+          });
+          this._states = values;
+        }).catch(error => {
+          console.error(error.message);
+        });
+      }
+
+    });
+  </script>
+</dom-module>

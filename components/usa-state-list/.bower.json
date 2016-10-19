@@ -1,0 +1,28 @@
+{
+  "name": "usa-state-list",
+  "description": "state drop down list that will include states, outlying territories, armed forces.",
+  "main": "usa-state-list.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.7.0",
+    "paper-dropdown-menu": "PolymerElements/paper-dropdown-menu#^1.4.1",
+    "paper-listbox": "PolymerElements/paper-listbox#^1.1.2",
+    "paper-item": "PolymerElements/paper-item#^1.2.1"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.0.0",
+    "web-component-tester": "^4.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
+  },
+  "homepage": "https://github.com/biztek/usa-state-list",
+  "_release": "e5fd1f6b95",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "e5fd1f6b95a7063ba61ca025259ed2e16a1588b1"
+  },
+  "_source": "git://github.com/biztek/usa-state-list.git",
+  "_target": "master",
+  "_originalSource": "biztek/usa-state-list",
+  "_direct": true
+}
