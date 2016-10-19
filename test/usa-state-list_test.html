@@ -1,0 +1,80 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>usa-state-list test</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../../web-component-tester/browser.js"></script>
+
+    <link rel="import" href="../usa-state-list.html">
+  </head>
+  <body>
+
+    <test-fixture id="basic">
+      <template>
+        <usa-state-list></usa-state-list>
+      </template>
+    </test-fixture>
+
+    <test-fixture id="error">
+      <template>
+        <usa-state-list required error-message="State is required" value=""></usa-state-list>
+      </template>
+    </test-fixture>
+
+    <test-fixture id="selectedValue">
+      <template>
+        <usa-state-list required autovalidate error-message="State is required" value="AL"></usa-state-list>
+      </template>
+    </test-fixture>
+
+    <script>
+      suite('usa-state-list', function() {
+
+        test('instantiating the element works', function() {
+          let element = fixture('basic');
+          assert.equal(element.is, 'usa-state-list');
+        });
+
+      });
+
+      suite('validating the dropdown menu', function() {
+
+        let dropdownElement,stateId, stateSelected
+        test('dropdown selected value', function() {
+          let dropdownElement = fixture('basic');
+          stateId = Polymer.dom(dropdownElement.root).querySelector('#state');
+          stateId.value = 'AL';
+          assert.equal(stateId.value, 'AL');
+        });
+
+        test('dropdown not selected or required invalid to true', function() {
+          let dropdownElement = fixture('error');
+          stateId = Polymer.dom(dropdownElement.root).querySelector('#state');
+          assert.isTrue(stateId.invalid, 'invalid is true');
+        });
+
+        test('dropdown is selected invalid to false', function() {
+          let dropdownElement = fixture('selectedValue');
+          stateId = Polymer.dom(dropdownElement.root).querySelector('#state');
+          assert.isFalse(stateId.invalid, 'invalid is False');
+        });
+
+        test('show error message when dropdown not selected', function(done) {
+          let dropdownElement = fixture('error');
+          stateId = Polymer.dom(dropdownElement.root).querySelector('#state');
+          stateId.validate();
+          setTimeout(function () {
+            assert.equal(stateId.errorMessage, 'State is required'),
+           done();
+       }, 10);
+
+
+        });
+      });
+
+    </script>
+  </body>
+</html>
