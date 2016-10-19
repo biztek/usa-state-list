@@ -1,4 +1,4 @@
-[![Build Status]([![Build Status](https://travis-ci.org/biztek/usa-state-list.svg?branch=master)](https://travis-ci.org/biztek/usa-state-list))
+[![Build Status](https://travis-ci.org/biztek/usa-state-list.svg?branch=master)](https://travis-ci.org/biztek/usa-state-list)
 
 _[Demo and API docs](https://biztek.github.io/usa-state-list/components/usa-state-list)_
 
