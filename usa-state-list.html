@@ -76,11 +76,7 @@ state drop down list that will include states, outlying territories, armed force
         required: {
           type: Boolean,
           value: false
-        },
-        fileName: {
-          type: String,
-          notify: true
-        },
+        }
 
       },
       observers: [
@@ -98,14 +94,14 @@ state drop down list that will include states, outlying territories, armed force
       },
 
       attached: function() {
-        this._loadJSON(this.fileName);
+        this._loadJSON('states.json');
         this.set('invalid', false);
         return this.invalid;
       },
 
       _loadJSON: function(url) {
 
-        fetch(url).then(response => {
+        fetch(this.resolveUrl(url)).then(response => {
           if (response.headers.get("content-type") &&
             response.headers.get("content-type").toLowerCase().indexOf("application/json") >= 0) {
             return response.json();
