@@ -94,12 +94,14 @@ state drop down list that will include states, outlying territories, armed force
       },
 
       attached: function() {
-        this._loadJSON('states.json');
+        this.async(function() {
+          this._loadJSON('states.json');
+        }, 1);
       },
 
       _loadJSON: function(url) {
 
-        fetch(this.resolveUrl(url)).then(response => {
+        fetch(this.resolveUrl(url)).then(response => { //jshint ignore: line
           if (response.headers.get("content-type") &&
             response.headers.get("content-type").toLowerCase().indexOf("application/json") >= 0) {
             return response.json();
