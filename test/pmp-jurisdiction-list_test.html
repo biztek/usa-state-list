@@ -1,0 +1,91 @@
+<!doctype html>
+
+<html>
+
+<head>
+  <title>pmp-jurisdiction-list test</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+  <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+  <script src="../../web-component-tester/browser.js"></script>
+
+  <link rel="import" href="../pmp-jurisdiction-list.html">
+</head>
+
+<body>
+
+  <test-fixture id="basic">
+    <template>
+        <pmp-jurisdiction-list file-name="../jurisdiction.json"></pmp-jurisdiction-list>
+      </template>
+  </test-fixture>
+
+  <test-fixture id="error">
+    <template>
+        <pmp-jurisdiction-list required error-message="Jurisdiction is required" file-name="../jurisdiction.json"></pmp-jurisdiction-list>
+      </template>
+  </test-fixture>
+
+  <test-fixture id="selectedValue">
+    <template>
+        <pmp-jurisdiction-list required autovalidate error-message="Jurisdiction is required" file-name="../jurisdiction.json"></pmp-jurisdiction-list>
+      </template>
+  </test-fixture>
+
+  <script>
+    suite('pmp-jurisdiction-list', function() {
+
+      test('instantiating the element works', function() {
+        let element = fixture('basic');
+        assert.equal(element.is, 'pmp-jurisdiction-list');
+      });
+
+    });
+
+    suite('validating the dropdown menu', function() {
+
+      let dropdownElement, jurisdictionId, jurisdictionSelected
+      test('dropdown selected value', function() {
+        let dropdownElement = fixture('basic');
+        jurisdictionValue = Polymer.dom(dropdownElement.root).querySelector('paper-listbox');
+        jurisdictionId = Polymer.dom(dropdownElement.root).querySelector('#jurisdiction');
+        jurisdictionValue.value = 'AL';
+        assert.equal(jurisdictionValue.value, 'AL');
+      });
+
+      test('dropdown not selected or required invalid to true', function() {
+        let dropdownElement = fixture('error');
+        jurisdictionValue = Polymer.dom(dropdownElement.root).querySelector('paper-listbox');
+        jurisdictionId = Polymer.dom(dropdownElement.root).querySelector('#jurisdiction');
+        jurisdictionValue.value = '';
+        jurisdictionId.validate();
+        assert.isTrue(jurisdictionId.invalid, 'invalid is true');
+      });
+
+      test('dropdown is selected invalid to false', function() {
+        let dropdownElement = fixture('selectedValue');
+        jurisdictionId = Polymer.dom(dropdownElement.root).querySelector('paper-dropdown-menu');
+        jurisdictionValue = Polymer.dom(dropdownElement.root).querySelector('paper-listbox');
+        jurisdictionValue.value = 'AL';
+        jurisdictionId.selected = 'AL';
+        assert.isFalse(jurisdictionId.invalid, 'invalid is False');
+      });
+
+      test('show error message when dropdown not selected', function(done) {
+        let dropdownElement = fixture('error');
+        jurisdictionValue = Polymer.dom(dropdownElement.root).querySelector('paper-listbox');
+        jurisdictionId = Polymer.dom(dropdownElement.root).querySelector('#jurisdiction');
+        jurisdictionValue.value = '';
+        jurisdictionId.validate();
+        setTimeout(function() {
+          assert.equal(jurisdictionId.errorMessage, 'Jurisdiction is required'),
+            done();
+        }, 10);
+
+
+      });
+    });
+  </script>
+</body>
+
+</html>
