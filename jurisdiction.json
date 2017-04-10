@@ -1,0 +1,306 @@
+[
+  {
+    "abbreviation": "AK",
+    "name": "ALASKA"
+  },
+  {
+    "abbreviation": "AL",
+    "name": "ALABAMA"
+  },
+  {
+    "abbreviation": "AR",
+    "name": "ARKANSAS"
+  },
+  {
+    "abbreviation": "AZ",
+    "name": "ARIZONA"
+  },
+  {
+    "abbreviation": "AS",
+    "name": "AMERICAN SAMOA"
+  },
+  {
+    "abbreviation": "BC",
+    "name": "BRITISH COLUMBIA"
+  },
+  {
+    "abbreviation": "CN",
+    "name": "CANADA"
+  },
+  {
+    "abbreviation": "CO",
+    "name": "COLORADO"
+  },
+  {
+    "abbreviation": "CA",
+    "name": "CALIFORNIA"
+  },
+  {
+    "abbreviation": "CT",
+    "name": "CONNECTICUT"
+  },
+  {
+    "abbreviation": "DE",
+    "name": "DELAWARE"
+  },
+  {
+    "abbreviation": "DC",
+    "name": "DISTRICT OF COLUMBIA"
+  },
+  {
+    "abbreviation": "FL",
+    "name": "FLORIDA"
+  },
+  {
+    "abbreviation": "GU",
+    "name": "GUAM"
+  },
+  {
+    "abbreviation": "GA",
+    "name": "GEORGIA"
+  },
+  {
+    "abbreviation": "HI",
+    "name": "HAWAII"
+  },
+  {
+    "abbreviation": "IA",
+    "name": "IOWA"
+  },
+  {
+    "abbreviation": "ID",
+    "name": "IDAHO"
+  },
+  {
+    "abbreviation": "IN",
+    "name": "INDIANA"
+  },
+  {
+    "abbreviation": "IL",
+    "name": "ILLINOIS"
+  },
+  {
+    "abbreviation": "KS",
+    "name": "KANSAS"
+  },
+  {
+    "abbreviation": "KY",
+    "name": "KENTUCKY"
+  },
+  {
+    "abbreviation": "LA",
+    "name": "LOUISIANA"
+  },
+  {
+    "abbreviation": "ME",
+    "name": "MAINE"
+  },
+  {
+    "abbreviation": "MI",
+    "name": "MICHIGAN"
+  },
+  {
+    "abbreviation": "MN",
+    "name": "MINNESOTA"
+  },
+  {
+    "abbreviation": "MO",
+    "name": "MISSOURI"
+  },
+  {
+    "abbreviation": "MX",
+    "name": "MEXICO"
+  },
+  {
+    "abbreviation": "MT",
+    "name": "MONTANA"
+  },
+  {
+    "abbreviation": "MD",
+    "name": "MARYLAND"
+  },
+  {
+    "abbreviation": "FM",
+    "name": "MICRONESIA"
+  },
+  {
+    "abbreviation": "MS",
+    "name": "MISSISSIPPI"
+  },
+  {
+    "abbreviation": "MA",
+    "name": "MASSACHUSETTS"
+  },
+  {
+    "abbreviation": "UM",
+    "name": "MINOR ISLANDS"
+  },
+  {
+    "abbreviation": "MP",
+    "name": "MARIANAS ISLANDS"
+  },
+  {
+    "abbreviation": "NV",
+    "name": "NEVADA"
+  },
+  {
+    "abbreviation": "NE",
+    "name": "NEBRASKA"
+  },
+  {
+    "abbreviation": "NJ",
+    "name": "NEW JERSEY"
+  },
+  {
+    "abbreviation": "NM",
+    "name": "NEW MEXICO"
+  },
+  {
+    "abbreviation": "NY",
+    "name": "NEW YORK"
+  },
+  {
+    "abbreviation": "NS",
+    "name": "NOVA SCOTIA"
+  },
+  {
+    "abbreviation": "NF",
+    "name": "NEWFOUNDLAND"
+  },
+  {
+    "abbreviation": "NB",
+    "name": "NEW BRUNSWICK"
+  },
+  {
+    "abbreviation": "NC",
+    "name": "NORTH CAROLINA"
+  },
+  {
+    "abbreviation": "ND",
+    "name": "NORTH DAKOTA"
+  },
+  {
+    "abbreviation": "NH",
+    "name": "NEW HAMPSHIRE"
+  },
+  {
+    "abbreviation": "NT",
+    "name": "NORTHWEST TERRITORIES"
+  },
+  {
+    "abbreviation": "NL",
+    "name": "NEWFOUNDLAND AND LABRADOR"
+  },
+  {
+    "abbreviation": "OH",
+    "name": "OHIO"
+  },
+  {
+    "abbreviation": "OR",
+    "name": "OREGON"
+  },
+  {
+    "abbreviation": "OK",
+    "name": "OKLAHOMA"
+  },
+  {
+    "abbreviation": "PW",
+    "name": "PALAU"
+  },
+  {
+    "abbreviation": "PA",
+    "name": "PENNSYLVANIA"
+  },
+  {
+    "abbreviation": "PR",
+    "name": "PUERTO RICO"
+  },
+  {
+    "abbreviation": "QC",
+    "name": "PROVINCE OF QUEBEC"
+  },
+  {
+    "abbreviation": "AB",
+    "name": "PROVINCE OF ALBERTA"
+  },
+  {
+    "abbreviation": "MB",
+    "name": "PROVINCE OF MANITOBA"
+  },
+  {
+    "abbreviation": "ON",
+    "name": "PROVINCE OF ONTARIO"
+  },
+  {
+    "abbreviation": "PE",
+    "name": "PRINCE EDWARD ISLAND"
+  },
+  {
+    "abbreviation": "SK",
+    "name": "PROVINCE OF SASKATCHEWAN"
+  },
+  {
+    "abbreviation": "RI",
+    "name": "RHODE ISLAND"
+  },
+  {
+    "abbreviation": "SD",
+    "name": "SOUTH DAKOTA"
+  },
+  {
+    "abbreviation": "SC",
+    "name": "SOUTH CAROLINA"
+  },
+  {
+    "abbreviation": "TX",
+    "name": "TEXAS"
+  },
+  {
+    "abbreviation": "TN",
+    "name": "TENNESSEE"
+  },
+  {
+    "abbreviation": "US",
+    "name": "UNITED STATES"
+  },
+  {
+    "abbreviation": "UT",
+    "name": "UTAH"
+  },
+  {
+    "abbreviation": "VA",
+    "name": "VIRGINIA"
+  },
+  {
+    "abbreviation": "VT",
+    "name": "VERMONT"
+  },
+  {
+    "abbreviation": "VI",
+    "name": "VIRGIN ISLANDS"
+  },
+  {
+    "abbreviation": "WI",
+    "name": "WISCONSIN"
+  },
+  {
+    "abbreviation": "WA",
+    "name": "WASHINGTON"
+  },
+  {
+    "abbreviation": "WV",
+    "name": "WEST VIRGINIA"
+  },
+  {
+    "abbreviation": "WY",
+    "name": "WYOMING"
+  },
+  {
+    "abbreviation": "YT",
+    "name": "YUKON TERRITORIES"
+  },
+  {
+    "abbreviation": "99",
+    "name": "OTHER"
+  }
+]

@@ -1,0 +1,123 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../paper-dropdown-menu/paper-dropdown-menu.html">
+<link rel="import" href="../paper-listbox/paper-listbox.html">
+<link rel="import" href="../paper-item/paper-item.html">
+
+<!--
+`pmp-jurisdiction-list`
+  ASAP grants permission to PDMPs to include this list of jurisdictions in their reporting
+  specifications and for pharmacy software providers to distribute this list to their pharmacy
+  clients.
+-->
+
+<dom-module id="pmp-jurisdiction-list">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+      #jurisdiction {
+        width: 100%;
+      }
+      paper-dropdown-menu-input {
+       @apply(--pmp-jurisdiction-list-input);
+     }
+    </style>
+
+    <paper-dropdown-menu id="jurisdiction" label="[[label]]" required="[[required]]"
+      auto-validate="[[autoValidate]]" title$="[[title]]" placeholder="[[placeholder]]"
+      invalid="{{invalid}}" error-message="[[errorMessage]]">
+    <paper-listbox class="dropdown-content" selected="{{value}}" attr-for-selected="name">
+      <template is="dom-repeat" items="[[_jurisdictions]]">
+        <paper-item name="[[item.abbreviation]]">[[item.name]]</paper-item>
+      </template>
+  </paper-listbox>
+  </paper-dropdown-menu>
+  </template>
+
+  <script>
+    Polymer({ // jshint ignore: line
+
+      is: 'pmp-jurisdiction-list',
+
+      properties: {
+        label: {
+          type: String,
+          value: 'Select jurisdiction *'
+        },
+        title: {
+          type: String,
+          value: 'Jurisdictions'
+        },
+        invalid: {
+          type: Boolean,
+          value: false,
+          notify: true
+        },
+        value: {
+          type: String,
+          notify: true
+        },
+        _jurisdictions: {
+          type: Array,
+        },
+        errorMessage: {
+          type: String,
+          value: 'jurisdiction is required'
+        },
+        placeholder: {
+          type: String,
+          value: ''
+        },
+        autoValidate: {
+          type: Boolean,
+          value: false
+        },
+        required: {
+          type: Boolean,
+          value: false
+        }
+
+      },
+      observers: [
+        '_jurisdictionChanged(value)'
+      ],
+
+      validate: function() {
+        this.async(function() {
+          this.$.jurisdiction.validate();
+        }, 10);
+      },
+
+      _jurisdictionChanged: function() {
+        this.validate();
+      },
+
+      attached: function() {
+        this.async(function() {
+          this._loadJSON('jurisdiction.json');
+        }, 1);
+      },
+
+      _loadJSON: function(url) {
+
+        fetch(this.resolveUrl(url)).then(response => { //jshint ignore: line
+          if (response.headers.get("content-type") &&
+            response.headers.get("content-type").toLowerCase().indexOf("application/json") >= 0) {
+            return response.json();
+          } else {
+            throw new TypeError();
+          }
+        }).then(data => {
+          let values = Object.keys(data).map((key) => {
+            return data[key];
+          });
+          this._jurisdictions = values;
+        }).catch(error => {
+          console.error(error.message);
+        });
+      }
+
+    });
+  </script>
+</dom-module>
