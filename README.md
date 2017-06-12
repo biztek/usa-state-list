@@ -2,17 +2,16 @@
 
 _[Demo and API docs](https://biztek.github.io/usa-state-list/components/usa-state-list)_
 
-##&lt;usa-state-list&gt;
+## <usa-state-list>
 
 `usa-state-list` is similar to a native browser select element.
 `usa-state-list` works with selectable content. The currently selected
 item is displayed in the control. If no item is selected, the `label` is
 displayed instead.
 
-
-state drop down list that will include states, outlying territories, armed forces.
+State drop down list that will include states, outlying territories,  armed forces.
 Example:
-It includes an optional label,error message,invalid,autovalidate and required attributes.
+It includes an optional label, error message, invalid, autovalidate and required attributes.
 ```html
 <usa-state-list file-name="jsonFile"></usa-state-list>
 <usa-state-list label="label"></usa-state-list>
@@ -31,7 +30,7 @@ If the `auto-validate` attribute is set, element validates when the user not sel
 Install the component using [Bower](http://bower.io/):
 
 ```sh
-$ bower install — save biztek/usa-state-list
+$ bower install -- save biztek/usa-state-list
 ```
 
 ## Usage
@@ -53,8 +52,8 @@ And then use it:
 1. Fork it!
 2. Create your feature branch: `git checkout -b usa-state-list`
 3. Commit your changes: `git commit -m 'Add some feature'`
-4. Push to the branch: `git push origin usa-state-list`
-5. Submit a pull request :D
+4. Push to the branch: `git push -u origin usa-state-list`
+5. Submit a pull request
 
 ## License
 
