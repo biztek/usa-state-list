@@ -31,7 +31,7 @@ If the `auto-validate` attribute is set, element validates when the user not sel
 Install the component using [Bower](http://bower.io/):
 
 ```sh
-* bower install --save biztek/usa-state-list
+bower install --save biztek/usa-state-list
 ```
 
 ## Usage
