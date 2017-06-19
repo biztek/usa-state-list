@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/biztek/usa-state-list.svg?branch=master)](https://travis-ci.org/biztek/usa-state-list)
 
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/biztek/usa-state-list)
+
 _[Demo and API docs](https://biztek.github.io/usa-state-list/components/usa-state-list)_
 
 ## <usa-state-list>
@@ -29,7 +31,7 @@ If the `auto-validate` attribute is set, element validates when the user not sel
 Install the component using [Bower](http://bower.io/):
 
 ```sh
-$ bower install --save biztek/usa-state-list
+bower install --save biztek/usa-state-list
 ```
 
 ## Usage
