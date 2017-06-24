@@ -1,8 +1,8 @@
 [![Build Status](https://travis-ci.org/biztek/usa-state-list.svg?branch=master)](https://travis-ci.org/biztek/usa-state-list)
 
-[![Sauce Test Status](https://saucelabs.com/buildstatus/biztek)](https://saucelabs.com/u/biztek)
+[![Sauce Test Status](https://saucelabs.com/buildstatus/biztek_opensource_sauce)](https://saucelabs.com/u/biztek_opensource_sauce)
 
-[![Sauce Test Status](https://saucelabs.com/browser-matrix/biztek.svg)](https://saucelabs.com/u/biztek)
+[![Sauce Test Status](https://saucelabs.com/browser-matrix/biztek_opensource_sauce.svg)](https://saucelabs.com/u/biztek_opensource_sauce)
 
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/biztek/usa-state-list)
 
