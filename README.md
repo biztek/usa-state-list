@@ -1,5 +1,9 @@
 [![Build Status](https://travis-ci.org/biztek/usa-state-list.svg?branch=master)](https://travis-ci.org/biztek/usa-state-list)
 
+[![Sauce Test Status](https://saucelabs.com/buildstatus/biztek)](https://saucelabs.com/u/biztek)
+
+[![Sauce Test Status](https://saucelabs.com/browser-matrix/biztek.svg)](https://saucelabs.com/u/biztek)
+
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/biztek/usa-state-list)
 
 _[Demo and API docs](https://biztek.github.io/usa-state-list/components/usa-state-list)_
