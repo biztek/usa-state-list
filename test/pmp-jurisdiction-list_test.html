@@ -71,17 +71,17 @@
         assert.isFalse(jurisdictionId.invalid, 'invalid is False');
       });
 
-      // test('show error message when dropdown not selected', function(done) {
-      //   let dropdownElement = fixture('error');
-      //   jurisdictionValue = Polymer.dom(dropdownElement.root).querySelector('paper-listbox');
-      //   jurisdictionId = Polymer.dom(dropdownElement.root).querySelector('#jurisdiction');
-      //   jurisdictionValue.value = '';
-      //   jurisdictionId.validate();
-      //   setTimeout(function() {
-      //     assert.equal(jurisdictionId.errorMessage, 'Jurisdiction is required'),
-      //       done();
-      //   }, 10);
-      // });
+      test('show error message when dropdown not selected', function(done) {
+        let dropdownElement = fixture('error');
+        jurisdictionValue = Polymer.dom(dropdownElement.root).querySelector('paper-listbox');
+        jurisdictionId = Polymer.dom(dropdownElement.root).querySelector('#jurisdiction');
+        jurisdictionValue.value = '';
+        jurisdictionId.validate();
+        setTimeout(function() {
+          assert.equal(jurisdictionId.errorMessage, 'Jurisdiction is required'),
+            done();
+        }, 10);
+      });
     });
   </script>
 </body>
