@@ -71,19 +71,17 @@
         assert.isFalse(stateId.invalid, 'invalid is False');
       });
 
-      test('show error message when dropdown not selected', function(done) {
-        let dropdownElement = fixture('error');
-        stateValue = Polymer.dom(dropdownElement.root).querySelector('paper-listbox');
-        stateId = Polymer.dom(dropdownElement.root).querySelector('#state');
-        stateValue.value = '';
-        stateId.validate();
-        setTimeout(function() {
-          assert.equal(stateId.errorMessage, 'State is required'),
-            done();
-        }, 10);
-
-
-      });
+      // test('show error message when dropdown not selected', function(done) {
+      //   let dropdownElement = fixture('error');
+      //   stateValue = Polymer.dom(dropdownElement.root).querySelector('paper-listbox');
+      //   stateId = Polymer.dom(dropdownElement.root).querySelector('#state');
+      //   stateValue.value = '';
+      //   stateId.validate();
+      //   setTimeout(function() {
+      //     assert.equal(stateId.errorMessage, 'State is required'),
+      //       done();
+      //   }, 10);
+      // });
     });
   </script>
 </body>
