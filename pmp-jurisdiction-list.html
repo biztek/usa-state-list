@@ -108,22 +108,6 @@
 
       _loadJSON: function (fileName) {
         this._url = this.resolveUrl(fileName);         
-        // fetch(this.resolveUrl(fileName)).then(response => { //jshint ignore: line
-        //   if (response.headers.get("content-type") &&
-        //     response.headers.get("content-type").toLowerCase().indexOf("application/json") >= 0) {
-        //     return response.json();
-        //   } else {
-        //     throw new TypeError();
-        //   }
-        // }).then(data => {
-        //   let values = Object.keys(data).map((key) => {
-        //     return data[key];
-        //   });
-        //   this._jurisdictions = values;
-        // }).catch(error => {
-        //   console.error(error.message);
-        // });
-
       }
 
     });
