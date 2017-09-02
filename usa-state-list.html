@@ -95,8 +95,9 @@ state drop down list that will include states, outlying territories, armed force
         }, 10);
       },
 
-      _stateChanged: function () {
-        this.validate();
+      _stateChanged: function (value) {
+        if (!value)
+          this.validate();
       },
 
       attached: function () {
