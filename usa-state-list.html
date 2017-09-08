@@ -35,7 +35,7 @@ state drop down list that will include states, outlying territories, armed force
         </template>
       </paper-listbox>
     </paper-dropdown-menu>
-    <iron-ajax auto url="[[_url]]" handle-as="json" response="{{_states}}"></iron-ajax>
+    <iron-ajax auto url="[[_url]]" handle-as="json" on-response="_handleResponse"></iron-ajax>
   </template>
 
   <script>
@@ -94,7 +94,9 @@ state drop down list that will include states, outlying territories, armed force
           this.$.state.validate();
         }, 10);
       },
-
+      _handleResponse: function(request) {
+        this._states = request.detail.response;
+      },
       _stateChanged: function (value) {
         if (!value)
           this.validate();
