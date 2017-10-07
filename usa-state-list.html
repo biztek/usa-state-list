@@ -28,7 +28,7 @@ state drop down list that will include states, outlying territories, armed force
     </style>
 
     <paper-dropdown-menu id="state" label="[[label]]" required="[[required]]" auto-validate="[[autoValidate]]" title$="[[title]]"
-      placeholder="[[placeholder]]" invalid="{{invalid}}" error-message="[[errorMessage]]">
+      placeholder="[[placeholder]]" name="state" invalid="{{invalid}}" error-message="[[errorMessage]]">
       <paper-listbox class="dropdown-content" selected="{{value}}" attr-for-selected="name">
         <template is="dom-repeat" items="[[_states]]">
           <paper-item name="[[item.abbreviation]]">[[item.name]]</paper-item>
