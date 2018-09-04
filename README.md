@@ -5,6 +5,10 @@
 [![Sauce Test Status](https://saucelabs.com/browser-matrix/biztek_opensource_sauce.svg)](https://saucelabs.com/u/biztek_opensource_sauce)
 
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/biztek/usa-state-list)
+  
+[![Published on Vaadin  Directory](https://img.shields.io/badge/Vaadin%20Directory-published-00b4f0.svg)](https://vaadin.com/directory/component/biztekusa-state-list)
+  
+[![Stars on vaadin.com/directory](https://img.shields.io/vaadin-directory/star/biztekusa-state-list.svg)](https://vaadin.com/directory/component/biztekusa-state-list)
 
 _[Demo and API docs](https://biztek.github.io/usa-state-list/components/usa-state-list)_
 
